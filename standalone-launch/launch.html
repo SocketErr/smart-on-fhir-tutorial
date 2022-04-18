@@ -18,11 +18,17 @@
 
                 // The scopes that you request from the EHR
                 scope: [
-                    "launch",           // Get the launch context in EHR launch mode
-                    "launch/patient",   // Get the current patient in standalone launch mode
-                    "launch/encounter", // Get the current encounter in standalone launch mode
-                    "openid fhirUser",  // Get the current user
-                    "patient/*.read"    // Read patient data
+                    //"launch",           // Get the launch context in EHR launch mode
+                    //"launch/patient",   // Get the current patient in standalone launch mode
+                    //"launch/encounter", // Get the current encounter in standalone launch mode
+                    //"openid fhirUser",  // Get the current user
+                    //"patient/*.read"    // Read patient data
+                    "user/Patient.read",
+                    "user/Observation.read",
+                    "launch",
+                    "online_access",
+                    "openid",
+                    "profile"
                  ].join(" "),
 
                 // Having this option means that it makes a standalone launch. This is to make
